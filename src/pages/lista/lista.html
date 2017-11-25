@@ -1,0 +1,28 @@
+<!--
+  Generated template for the ListaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="red">
+    <ion-title>lista</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let lista of listas">
+      <ion-thumbnail item-start>
+        <img src="{{lista.img}}">
+      </ion-thumbnail>
+      <h2>{{lista.nombre}}</h2>
+      <p>{{lista.procesador}}</p>
+      <button (click)="goToPageDetalle(lista.id)" ion-button block>Detalle</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
